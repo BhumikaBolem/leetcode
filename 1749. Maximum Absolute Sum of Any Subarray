@@ -1,0 +1,10 @@
+lass Solution:
+    def maxAbsoluteSum(self, nums: List[int]) -> int:
+        x = n = s = 0
+        
+        for num in nums:
+            s += num
+            x = max(x, s)
+            n = min(n, s)
+
+        return x - n
